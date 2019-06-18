@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 description = "A simple utility for converting files that describe malware infections into remediation scripts that can clean up infections using native OS tools."
 
 here = path.abspath(path.dirname(__file__))
@@ -100,6 +100,6 @@ setup(
     #      'wheel>=0.33.4'],
 
     entry_points={
-        'console_scripts': ['remediation-off-the-land=RotL:main'],
+        'console_scripts': ['RotL=RotL:main'],
     }
 )
