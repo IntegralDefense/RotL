@@ -6,13 +6,13 @@ Remediationn off the Land (RotL) is a simple tool that converts a list of artifa
 
 ``pip3 install rotl``
 
-## The rotl.py script
+## The RotL script
 
 When installed, a commannd line script named 'rotl' is supplied that can be used to convert the remediation scripts into remediation files. Currently only windows remediations are supported.
 
 ```
-$ rotl.py -h
-usage: rotl.py [-h] [-w {win}] [-f REMEDIATION] [-t {win}] [-o OUTFILE]
+$ RotL -h
+usage: RotL [-h] [-w {win}] [-f REMEDIATION] [-t {win}] [-o OUTFILE]
 
 Remediation off the Land: Write remediation files to execute
 
@@ -33,7 +33,7 @@ optional arguments:
 You can use the rotl script to print a copy of the remediation template file that can be used to describe a malicious infection. 
 
 ```
-$ rotl.py -w win
+$ RotL -w win
 + Wrote remediate.ini
 ```
 
@@ -132,7 +132,7 @@ reg1=HKU\S-1-5-21-1549631456-1210741653-3294372961-500\SOFTWARE\Microsoft\Window
 Create the batch file:
 
 ```
-$ rotl.py -f remediate.ini 
+$ RotL -f remediate.ini 
 + Wrote 'remediation.bat'
 ```
 
