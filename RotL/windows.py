@@ -6,7 +6,7 @@ def delete_file(file_path):
     :return: The command string.
     :rtype: str
     """
-    return 'del "{}"'.format(file_path)
+    return 'del /F "{}"'.format(file_path)
 
 
 def delete_registry_value(reg_path):

@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 description = "A simple utility for converting files that describe malware infections into remediation scripts that can clean up infections using native OS tools."
 
 here = path.abspath(path.dirname(__file__))

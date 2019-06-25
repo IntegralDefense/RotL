@@ -10,7 +10,7 @@ Remediationn off the Land (RotL) is a simple tool that converts a list of artifa
 
 When installed, a commannd line script named 'rotl' is supplied that can be used to convert the remediation scripts into remediation files. Currently only windows remediations are supported.
 
-```
+```bash
 $ RotL -h
 usage: RotL [-h] [-w {win}] [-f REMEDIATION] [-t {win}] [-o OUTFILE]
 
@@ -32,15 +32,14 @@ optional arguments:
 
 You can use the rotl script to print a copy of the remediation template file that can be used to describe a malicious infection. 
 
-```
+```bash
 $ RotL -w win
 + Wrote remediate.ini
 ```
 
 Now, you can edit the remediate.ini file to reflect the infection.
 
-```
-
+```bash
 $ cat remediate.ini 
 ## Example remediate routine file.
 ##  All keys are commented out under their respective sections by default.
@@ -101,7 +100,7 @@ $ cat remediate.ini
 
 Example remediate file describing a Qbot infection:
 
-```
+```bash
 $ cat remediate.ini 
 [files]
 file1=C:\WINDOWS\TEMP\iajzq.mkt
@@ -131,14 +130,14 @@ reg1=HKU\S-1-5-21-1549631456-1210741653-3294372961-500\SOFTWARE\Microsoft\Window
 
 Create the batch file:
 
-```
+```bash
 $ RotL -f remediate.ini 
 + Wrote 'remediation.bat'
 ```
 
 Now you this file was executed with admin rights on the infected system to remove the infection.
 
-```
+```bash
 $ cat remediation.bat 
 taskkill /IM "cscript.exe" /F
 taskkill /IM "iajzq.exe" /F
